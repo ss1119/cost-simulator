@@ -100,7 +100,7 @@ function App() {
                     return (
                       <label key={index}>
                         <img
-                          src={"./src/assets/service" + (index + 1) + ".jpg"}
+                          src={"./public/assets/service" + (index + 1) + ".jpg"}
                           alt={"service" + (index + 1)}
                           onClick={() => {
                             const newValue = isSelected
