@@ -21,7 +21,6 @@ function App() {
     },
   });
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data.service);
     let cost = 0;
     data.service.forEach((value) => {
       const service = serviceMaster.find((service) => service.name === value)!;
@@ -132,36 +131,38 @@ function App() {
   });
 
   return (
-    <div className="w-screen flex flex-col items-center justify-center px-4 py-5">
+    <div className="w-screen flex flex-col items-center justify-center">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="flex justify-center text-2xl font-bold text-orange-500">
-          1分で簡単お見積もり
-          <br className="lg:hidden" />
-          シミュレーション
-        </h1>
-        <div className="w-full flex flex-col gap-3 mt-3 px-6 py-3 border-4 rounded-lg border-orange-500">
-          {questionList}
-          <div className="flex justify-center my-4">
-            <button
-              className="border-2 rounded-lg text-white bg-blue-600 font-semibold py-2 px-7"
-              type="submit"
-            >
-              お見積り額を計算
-            </button>
-          </div>
-          <div className="font-semibold">お見積り額 合計</div>
-          <div className="w-full border-b-2 flex items-end justify-end">
-            <div className="mr-2 text-3xl font-semibold">
-              {totalCost !== 0 ? totalCost.toLocaleString("ja-JP") : ""}
+        <img src="./assets/header.jpg" alt="header" className="w-full h-full" />
+        <div className="px-4 py-3 bg-orange-100">
+          <div className="w-full flex flex-col gap-3 px-6 py-3 border-4 rounded-lg border-orange-500 bg-white">
+            {questionList}
+            <div className="flex justify-center my-4">
+              <button
+                className="border-2 rounded-lg text-white bg-blue-600 font-semibold py-2 px-7"
+                type="submit"
+              >
+                お見積り額を計算
+              </button>
             </div>
-            円
+            <div className="font-semibold">お見積り額 合計</div>
+            <div className="w-full border-b-2 flex items-end justify-end">
+              <div className="mr-2 text-3xl font-semibold">
+                {totalCost !== 0 ? totalCost.toLocaleString("ja-JP") : ""}
+              </div>
+              円
+            </div>
+            <span className="text-xs">
+              ※ 実際のご請求額とお見積り金額が異なる場合がございます
+              <br />※
+              あくまでもシミュレーション上の金額ですので、参考金額としてお考えください
+            </span>
           </div>
-          <span className="text-xs">
-            ※ 実際のご請求額とお見積り金額が異なる場合がございます
-            <br />※
-            あくまでもシミュレーション上の金額ですので、参考金額としてお考えください
-          </span>
         </div>
+        <img src="./assets/footer.jpg" alt="footer" className="w-full h-full" />
+        <a href="tel:0120088555">
+          <img src="./assets/call.jpg" alt="call" className="w-full h-full" />
+        </a>
       </form>
     </div>
   );
