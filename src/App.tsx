@@ -107,7 +107,7 @@ function App() {
                               : [...field.value, choice];
                             field.onChange(newValue);
                           }}
-                          className={`w-28 h-20 object-contain rounded-lg cursor-pointer transition ${
+                          className={`w-32 object-contain rounded-lg cursor-pointer transition ${
                             isSelected
                               ? "ring-4 ring-blue-500"
                               : "ring-2 ring-gray-300 hover:ring-blue-300"

@@ -47,10 +47,10 @@ export const questionMaster: questionMasterType[] = [
     choices: [
       "害獣駆除",
       "害虫駆除",
-      "再発防止対策",
-      "清掃作業",
-      "消毒・除菌",
-      "消臭",
+      "再発対策",
+      "糞尿清掃",
+      "殺菌消毒",
+      "悪臭消臭",
     ],
     inputValue: "service",
     isRadioButton: false,
@@ -79,7 +79,7 @@ export const serviceMaster = [
     ],
   },
   {
-    name: "再発防止対策",
+    name: "再発対策",
     prices: [
       { type: "50㎡以下", price: 50000 },
       { type: "100㎡以下", price: 50000 },
@@ -89,7 +89,7 @@ export const serviceMaster = [
     ],
   },
   {
-    name: "清掃作業",
+    name: "糞尿清掃",
     prices: [
       { type: "50㎡以下", price: 12500 },
       { type: "100㎡以下", price: 30000 },
@@ -99,7 +99,7 @@ export const serviceMaster = [
     ],
   },
   {
-    name: "消毒・除菌",
+    name: "殺菌消毒",
     prices: [
       { type: "50㎡以下", price: 12500 },
       { type: "100㎡以下", price: 30000 },
@@ -109,7 +109,7 @@ export const serviceMaster = [
     ],
   },
   {
-    name: "消臭",
+    name: "悪臭消臭",
     prices: [
       { type: "50㎡以下", price: 20000 },
       { type: "100㎡以下", price: 52500 },
